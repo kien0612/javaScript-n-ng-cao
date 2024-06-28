@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <textarea id="inputText" rows="5" cols="30" placeholder="Enter underscore_case variables"></textarea>
+    <button onclick="convert()">Convert</button>
+    <div id="output"></div>
+    <h1>Đổi Màu Lab2 Bài 2.4</h1>
+    <script>
+        function convert() {
+          const inputText = document.getElementById('inputText').value;
+          const variables = inputText.split('\n');
+    
+          const outputDiv = document.getElementById('output');
+          outputDiv.innerHTML = '';
+    
+          variables.forEach(variable => {
+            const camelCase = convertToCamelCase(variable);
+            const tickMarks = '✅'.repeat(camelCase.length);
+            outputDiv.innerHTML += `<p>${camelCase} ${tickMarks}</p>`;
+          });
+        }
+    
+        function convertToCamelCase(underscoreVariable) {
+          const words = underscoreVariable.split('_');
+          const camelCase = words.map((word, index) => index === 0 ? word : capitalizeFirstLetter(word)).join('');
+          return camelCase;
+        }
+    
+        function capitalizeFirstLetter(word) {
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+
+        (function () {
+            const header = document.querySelector('h1');
+            header.style.color = 'red';
+
+            document.querySelector('body').addEventListener('click', function () {
+                header.style.color = 'blue';
+            });
+        })();
+      </script>
+</body>
+</html>

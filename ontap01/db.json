@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Sản phẩm 1",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "name": "Sản phẩm 2",
+      "price": 200
+    },
+    {
+      "name": "Đỗ Quang Quyết88",
+      "price": "01",
+      "id": "a65e"
+    },
+    {
+      "id": "d165",
+      "name": "Vũ Trung Kiên",
+      "price": "10000"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": 123456
+    }
+  ]
+}
